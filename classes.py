@@ -1,4 +1,4 @@
-class Television:
+class television:
     """
     A class representing details for a Television object
     """
@@ -8,15 +8,13 @@ class Television:
     MIN_VOLUME = 0  # Minimum TV volume
     MAX_VOLUME = 2  # Maximum TV volume
 
-    def __init__(self, MIN_CHANNEL: str, MIN_VOLUME) -> None:
+    def __init__(self) -> None:
         """
         Constructor to create initial state of a Television object
-        :param MIN_CHANNEL: Television's minimum channel
-        :param MIN_VOLUME: Television's minimum channel
         """
         self.__tv_channel = self.MIN_CHANNEL
         self.__tv_volume = self.MIN_VOLUME
-        self.__status = False
+        self.__status = True
 
     def power(self) -> None:
         """
@@ -24,7 +22,6 @@ class Television:
         """
         if self.__status:
             self.__status = False
-
         else:
             self.__status = True
 
